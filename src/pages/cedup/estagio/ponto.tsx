@@ -1,8 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Head from 'next/head';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export default function Ponto() {
   const [nomeAluno, setNomeAluno] = useState('');
@@ -61,35 +62,7 @@ export default function Ponto() {
       </Head>
 
       <div className="min-h-screen">
-        {/* Cabeçalho */}
-        <header className="fixed top-0 left-0 right-0 bg-white z-10 py-4">
-          <div className="flex items-center justify-center space-x-4">
-            <Image
-              src="/images/brazao.png"
-              alt="Brasão SC"
-              width={106}
-              height={91}
-              className="object-contain"
-            />
-            <div className="text-center font-bold">
-              <p>ESTADO DE SANTA CATARINA</p>
-              <p>SECRETARIA DE ESTADO DA EDUCAÇÃO</p>
-              <p>COORDENADORIA REGIONAL DA EDUCAÇÃO - CRE</p>
-              <p>
-                CENTRO DE EDUCAÇÃO PROFISSIONAL &ldquo;DARIO GERALDO
-                SALLES&rdquo; - CEDUP
-              </p>
-              <p>SETOR DE ESTÁGIO - JOINVILLE</p>
-            </div>
-            <Image
-              src="/images/cedup.png"
-              alt="Logo CEDUP"
-              width={91}
-              height={91}
-              className="object-contain"
-            />
-          </div>
-        </header>
+        <Header fixed className="py-4" />
 
         {/* Formulário */}
         <div
@@ -225,36 +198,7 @@ export default function Ponto() {
           </table>
         </div>
 
-        {/* Rodapé */}
-        <footer className="fixed bottom-0 left-0 right-0 bg-white p-4 text-center text-sm">
-          <div className="space-y-1">
-            <p>
-              Rua Monsenhor Gercino, 2071 – Bairro Itaum – CEP 89210-155 –
-              Joinville – SC Telefone - 34812136
-            </p>
-            <p>
-              <a
-                href="https://www.cedup.com.br/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-800"
-              >
-                www.cedup.com.br
-              </a>
-              {' - email - '}
-              <a
-                href="mailto:estagiocedupjlle@sed.sc.gov.br"
-                className="text-blue-600 hover:text-blue-800"
-              >
-                estagiocedupjlle@sed.sc.gov.br
-              </a>
-            </p>
-            <p className="text-gray-500">
-              Copyright © {new Date().getFullYear()} LCO Systems, All rights
-              reserved.
-            </p>
-          </div>
-        </footer>
+        <Footer fixed className="p-4" />
       </div>
 
       <style jsx global>{`

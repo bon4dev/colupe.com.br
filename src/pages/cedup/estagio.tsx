@@ -1,7 +1,8 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 // Constante do ambiente
 const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN || 'localhost:3000';
@@ -9,44 +10,7 @@ const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN || 'localhost:3000';
 export default function Estagio() {
   return (
     <div className="container mx-auto px-4">
-      {/* Cabeçalho */}
-      <header className="flex items-center justify-between py-6">
-        <div className="w-20 h-20 relative">
-          <Image
-            src="/images/brazao.png"
-            alt="Brasão"
-            width={80}
-            height={80}
-            className="object-contain"
-          />
-        </div>
-
-        <div className="text-center flex-1 mx-8">
-          <div className="space-y-1">
-            <p className="text-sm font-semibold">ESTADO DE SANTA CATARINA</p>
-            <p className="text-sm font-semibold">
-              SECRETARIA DE ESTADO DA EDUCAÇÃO
-            </p>
-            <p className="text-sm font-semibold">
-              CENTRO DE EDUCAÇÃO PROFISSIONAL &ldquo;DARIO GERALDO SALLES&rdquo;
-              - CEDUP
-            </p>
-            <p className="text-sm font-semibold">
-              SETOR DE ESTÁGIO - JOINVILLE
-            </p>
-          </div>
-        </div>
-
-        <div className="w-20 h-20 relative">
-          <Image
-            src="/images/cedup.png"
-            alt="CEDUP"
-            width={80}
-            height={80}
-            className="object-contain"
-          />
-        </div>
-      </header>
+      <Header />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
         {/* Procedimentos */}
@@ -385,35 +349,7 @@ export default function Estagio() {
         </div>
       </div>
 
-      {/* Rodapé */}
-      <footer className="mt-12 pb-6 text-center text-sm text-gray-600">
-        <div className="space-y-2">
-          <p>
-            Rua Monsenhor Gercino, 2071 – Bairro Itaum – CEP 89210-155 –
-            Joinville – SC Telefone - 34812136
-          </p>
-          <p>
-            <a
-              href="https://www.cedup.com.br/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 hover:text-blue-800"
-            >
-              https://www.cedup.com.br/
-            </a>
-            {' - email - '}
-            <a
-              href="mailto:estagiocedupjlle@sed.sc.gov.br"
-              className="text-blue-600 hover:text-blue-800"
-            >
-              estagiocedupjlle@sed.sc.gov.br
-            </a>
-          </p>
-          <p className="text-gray-500">
-            &copy; 2025 LCO Systems, All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
