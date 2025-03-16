@@ -396,6 +396,8 @@ export default function Estagio() {
           <p>
             <a
               href="https://www.cedup.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-blue-600 hover:text-blue-800"
             >
               https://www.cedup.com.br/
