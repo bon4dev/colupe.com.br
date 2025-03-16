@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 
 // Constante do ambiente
@@ -12,8 +14,7 @@ export default function Estagio() {
           <Image
             src="/images/brazao.png"
             alt="Brasão"
-            width={80}
-            height={80}
+            fill
             className="object-contain"
           />
         </div>
@@ -38,8 +39,7 @@ export default function Estagio() {
           <Image
             src="/images/cedup.png"
             alt="CEDUP"
-            width={80}
-            height={80}
+            fill
             className="object-contain"
           />
         </div>
@@ -248,7 +248,128 @@ export default function Estagio() {
             </ul>
           </div>
         </div>
+
+        {/* Instruções */}
+        <div className="rounded-lg border border-gray-200 shadow-sm">
+          <div className="bg-gray-50 px-4 py-3 border-b border-gray-200">
+            <h5 className="text-lg font-medium">
+              51 - Instruções de como fazer passo a passo
+            </h5>
+          </div>
+          <div className="divide-y divide-gray-200">
+            <ul>
+              <li className="px-4 py-3 hover:bg-gray-50">
+                <a
+                  href="https://docs.google.com/document/d/1XQ0gJihdHN53B-Kq4qVkk0TAqkM4V-s4/edit?usp=drive_link&ouid=110841182330939065822&rtpof=true&sd=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800"
+                >
+                  5100 - Dados do Seguro de Vida
+                </a>
+              </li>
+              <li className="px-4 py-3 hover:bg-gray-50">
+                <a
+                  href="https://docs.google.com/document/d/1KGRJguQV53Xjoth0RygUM0zl4AVoSOtrMCoNzBezl5A/edit?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800"
+                >
+                  5101 - Avaliar Relatório de Estágio
+                </a>
+              </li>
+              <li className="px-4 py-3 hover:bg-gray-50">
+                <a
+                  href="https://docs.google.com/document/d/1aehgrOO6z2D3k1nS2qWhcD6RRB0elZ_zy9MFXkWdt7o/edit?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800"
+                >
+                  5103 - Avaliar Requerimento de Dispensa de Estágio
+                </a>
+              </li>
+              <li className="px-4 py-3 hover:bg-gray-50">
+                <a
+                  href="https://docs.google.com/document/d/1my911RBFw2qXFlQPggN-ctM5x7o5zOkKG7JWNxJ5efI/edit?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800"
+                >
+                  5105 - Enviar por email instruções para a empresa
+                </a>
+              </li>
+              <li className="px-4 py-3 hover:bg-gray-50">
+                <a
+                  href="https://docs.google.com/document/d/1p0LwoPgsYzZrCq_blo3uDvDWb8I2PSwd/edit?usp=drive_link&ouid=110841182330939065822&rtpof=true&sd=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800"
+                >
+                  5106 - Preencher TCE Obrigatório com Convênio
+                </a>
+              </li>
+              <li className="px-4 py-3 hover:bg-gray-50">
+                <a
+                  href="https://docs.google.com/document/d/1e4Dp_nA8z0r9JGPcMjCbA3He2kao_Akf/edit?usp=drive_link&ouid=110841182330939065822&rtpof=true&sd=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800"
+                >
+                  5107 - Preencher TCE Obrigatório sem Convênio
+                </a>
+              </li>
+              <li className="px-4 py-3 hover:bg-gray-50">
+                <a
+                  href="https://docs.google.com/document/d/1HVt7aQjnaYCseR8RHK6IDtVB_qZMcO4_1-UQSnhOaFQ/edit?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800"
+                >
+                  5109 - TCE Protocolar o recebimento
+                </a>
+              </li>
+              <li className="px-4 py-3 hover:bg-gray-50">
+                <a
+                  href="https://docs.google.com/document/d/1I2H20BajlGijaI93w0iXL5WNpfrC1IYllQC9WtBmR8Q/edit?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800"
+                >
+                  5110 - Termo de Convênio Protocolar o recebimento
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
+
+      {/* Rodapé */}
+      <footer className="mt-12 pb-6 text-center text-sm text-gray-600">
+        <div className="space-y-2">
+          <p>
+            Rua Monsenhor Gercino, 2071 – Bairro Itaum – CEP 89210-155 –
+            Joinville – SC Telefone - 34812136
+          </p>
+          <p>
+            <a
+              href={`http://${DOMAIN}`}
+              className="text-blue-600 hover:text-blue-800"
+            >
+              {DOMAIN}
+            </a>
+            {' - email - '}
+            <a
+              href="mailto:estagiocedupjlle@sed.sc.gov.br"
+              className="text-blue-600 hover:text-blue-800"
+            >
+              estagiocedupjlle@sed.sc.gov.br
+            </a>
+          </p>
+          <p className="text-gray-500">
+            &copy; 2025 LCO Systems, All rights reserved.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
