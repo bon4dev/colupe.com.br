@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 // Constante do ambiente
 const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN || 'localhost:3000';
@@ -76,14 +77,12 @@ export default function Estagio() {
                 </a>
               </li>
               <li className="px-4 py-3 hover:bg-gray-50">
-                <a
-                  href={`${DOMAIN}/cedup/estagio/ponto`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/cedup/estagio/ponto"
                   className="text-blue-600 hover:text-blue-800"
                 >
                   1109 - Imprimir Folha Ponto
-                </a>
+                </Link>
               </li>
               <li className="px-4 py-3 hover:bg-gray-50">
                 <a
