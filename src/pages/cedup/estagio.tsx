@@ -343,6 +343,47 @@ export default function Estagio() {
             </ul>
           </div>
         </div>
+
+        {/* Declarações */}
+        <div className="rounded-lg border border-gray-200 shadow-sm">
+          <div className="bg-gray-50 px-4 py-3 border-b border-gray-200">
+            <h5 className="text-lg font-medium">16 - Declarações</h5>
+          </div>
+          <div className="divide-y divide-gray-200">
+            <ul>
+              <li className="px-4 py-3 hover:bg-gray-50">
+                <a
+                  href="https://docs.google.com/document/d/1t_4FYLVWkd3MZ_5JEZqsgLJlWsfzdzHF/edit?usp=drive_link&ouid=110841182330939065822&rtpof=true&sd=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800"
+                >
+                  1621 - Declaração Estágio no Cedup
+                </a>
+              </li>
+              <li className="px-4 py-3 hover:bg-gray-50">
+                <a
+                  href="https://docs.google.com/document/d/1LhlcWOglzllWninxX6itCdS7Z4msUWvZ/edit?usp=drive_link&ouid=110841182330939065822&rtpof=true&sd=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800"
+                >
+                  1622 - Declaração de Estágio
+                </a>
+              </li>
+              <li className="px-4 py-3 hover:bg-gray-50">
+                <a
+                  href="https://docs.google.com/document/d/1S6SPVFu_uAZfFJguekNCkWaL2VI82qkX/edit?usp=drive_link&ouid=110841182330939065822&rtpof=true&sd=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800"
+                >
+                  1630 - Declaração de Diploma em Tramitação
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       {/* Rodapé */}
