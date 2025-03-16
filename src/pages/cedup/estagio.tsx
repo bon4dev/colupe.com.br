@@ -354,10 +354,10 @@ export default function Estagio() {
           </p>
           <p>
             <a
-              href={`http://${DOMAIN}`}
+              href="https://www.cedup.com.br/"
               className="text-blue-600 hover:text-blue-800"
             >
-              {DOMAIN}
+              https://www.cedup.com.br/
             </a>
             {' - email - '}
             <a
