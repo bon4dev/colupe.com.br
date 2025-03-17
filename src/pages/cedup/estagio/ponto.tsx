@@ -62,11 +62,11 @@ export default function Ponto() {
       </Head>
 
       <div className="min-h-screen">
-        <Header fixed className="py-4" />
+        <Header className="py-4" />
 
         {/* Formulário */}
         <div
-          className={`pt-40 w-[650px] mx-auto ${
+          className={`mt-4 w-[650px] mx-auto ${
             showPrint ? 'hidden print:hidden' : ''
           }`}
         >
@@ -144,7 +144,7 @@ export default function Ponto() {
         <div
           className={`hidden print:block ${
             showPrint ? 'block' : ''
-          } pt-40 w-[900px] mx-auto`}
+          } mt-4 w-[900px] mx-auto`}
         >
           <div className="text-center text-xl font-bold space-y-2">
             <p>
@@ -198,7 +198,7 @@ export default function Ponto() {
           </table>
         </div>
 
-        <Footer fixed className="p-4" />
+        <Footer className="p-4" />
       </div>
 
       <style jsx global>{`
