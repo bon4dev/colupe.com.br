@@ -62,11 +62,11 @@ export default function Ponto() {
       </Head>
 
       <div className="min-h-screen">
-        <Header className="py-4" />
+        <Header />
 
         {/* Formulário */}
         <div
-          className={`mt-4 w-[650px] mx-auto ${
+          className={`mt-0 w-[650px] mx-auto ${
             showPrint ? 'hidden print:hidden' : ''
           }`}
         >
@@ -144,31 +144,31 @@ export default function Ponto() {
         <div
           className={`hidden print:block ${
             showPrint ? 'block' : ''
-          } mt-4 w-[900px] mx-auto`}
+          } w-[800px] mx-auto`}
         >
-          <div className="text-center text-xl font-bold space-y-2">
+          <div className="text-center text-lg font-bold space-y-0.5">
             <p>
               FOLHA PONTO – {meses[parseInt(mes)]} / {ano}
             </p>
             <p>ESTAGIÁRIO – {nomeAluno}</p>
           </div>
 
-          <table className="w-full mt-6 border-collapse">
+          <table className="w-full mt-2 border-collapse">
             <thead>
               <tr>
-                <th className="w-[30px] border border-black bg-gray-200 p-2">
+                <th className="w-[25px] border border-black bg-gray-200 p-1">
                   Dia
                 </th>
-                <th className="w-[450px] border border-black bg-gray-200 p-2">
+                <th className="w-[400px] border border-black bg-gray-200 p-1">
                   Nome
                 </th>
-                <th className="w-[130px] border border-black bg-gray-200 p-2">
+                <th className="w-[100px] border border-black bg-gray-200 p-1">
                   Entrada
                 </th>
-                <th className="w-[130px] border border-black bg-gray-200 p-2">
+                <th className="w-[100px] border border-black bg-gray-200 p-1">
                   Saída
                 </th>
-                <th className="w-[180px] border border-black bg-gray-200 p-2">
+                <th className="w-[150px] border border-black bg-gray-200 p-1">
                   Rubrica
                 </th>
               </tr>
@@ -179,19 +179,19 @@ export default function Ponto() {
                   key={dia}
                   className={`${
                     diaSemana === 0 || diaSemana === 6 ? 'bg-gray-200' : ''
-                  }`}
+                  } h-6`}
                 >
-                  <td className="border border-black p-2 bg-gray-200">{dia}</td>
-                  <td className="border border-black p-2">
+                  <td className="border border-black p-1 bg-gray-200">{dia}</td>
+                  <td className="border border-black p-1">
                     {diaSemana === 0
                       ? 'DOMINGO'
                       : diaSemana === 6
                       ? 'SÁBADO'
                       : ''}
                   </td>
-                  <td className="border border-black p-2"></td>
-                  <td className="border border-black p-2"></td>
-                  <td className="border border-black p-2"></td>
+                  <td className="border border-black p-1"></td>
+                  <td className="border border-black p-1"></td>
+                  <td className="border border-black p-1"></td>
                 </tr>
               ))}
             </tbody>
@@ -205,7 +205,7 @@ export default function Ponto() {
         @media print {
           @page {
             size: A4;
-            margin: 20mm;
+            margin: 0mm 20mm;
           }
           body {
             -webkit-print-color-adjust: exact;

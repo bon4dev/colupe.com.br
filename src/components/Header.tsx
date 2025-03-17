@@ -24,7 +24,6 @@ export default function Header({ fixed = false, className = '' }: HeaderProps) {
         <div className="text-center font-bold">
           <p>ESTADO DE SANTA CATARINA</p>
           <p>SECRETARIA DE ESTADO DA EDUCAÇÃO</p>
-          <p>COORDENADORIA REGIONAL DA EDUCAÇÃO - CRE</p>
           <p>
             CENTRO DE EDUCAÇÃO PROFISSIONAL &ldquo;DARIO GERALDO SALLES&rdquo; -
             CEDUP
