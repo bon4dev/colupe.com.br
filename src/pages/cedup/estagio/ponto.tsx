@@ -37,6 +37,10 @@ export default function Ponto() {
     setShowPrint(true);
     setTimeout(() => {
       window.print();
+      // Adiciona um pequeno delay para resetar o estado após a impressão
+      setTimeout(() => {
+        setShowPrint(false);
+      }, 500);
     }, 100);
   };
 
