@@ -7,7 +7,7 @@ export default function Footer({ fixed = false, className = '' }: FooterProps) {
   return (
     <footer
       className={`${
-        fixed ? 'fixed bottom-0 left-0 right-0 bg-white' : 'mt-12 pb-6'
+        fixed ? 'fixed bottom-0 left-0 right-0 bg-white' : 'pb-2'
       } text-center text-sm text-gray-600 ${className}`}
     >
       <div className="space-y-2">
