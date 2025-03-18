@@ -179,19 +179,21 @@ export default function Ponto() {
                   key={dia}
                   className={`${
                     diaSemana === 0 || diaSemana === 6 ? 'bg-gray-200' : ''
-                  } h-6`}
+                  } h-5`}
                 >
-                  <td className="border border-black p-1 bg-gray-200">{dia}</td>
-                  <td className="border border-black p-1">
+                  <td className="border border-black p-0.5 bg-gray-200">
+                    {dia}
+                  </td>
+                  <td className="border border-black p-0.5">
                     {diaSemana === 0
                       ? 'DOMINGO'
                       : diaSemana === 6
                       ? 'SÁBADO'
                       : ''}
                   </td>
-                  <td className="border border-black p-1"></td>
-                  <td className="border border-black p-1"></td>
-                  <td className="border border-black p-1"></td>
+                  <td className="border border-black p-0.5"></td>
+                  <td className="border border-black p-0.5"></td>
+                  <td className="border border-black p-0.5"></td>
                 </tr>
               ))}
             </tbody>
@@ -205,7 +207,7 @@ export default function Ponto() {
         @media print {
           @page {
             size: A4;
-            margin: 0mm 20mm;
+            margin: 15mm 20mm;
           }
           body {
             -webkit-print-color-adjust: exact;
