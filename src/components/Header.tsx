@@ -12,16 +12,16 @@ export default function Header({ fixed = false, className = '' }: HeaderProps) {
         fixed ? 'fixed top-0 left-0 right-0 bg-white z-10' : ''
       } ${className}`}
     >
-      <div className="flex items-center justify-center space-x-4 py-6">
+      <div className="flex items-center justify-center space-x-3 py-4">
         <Image
           src="/images/brazao.png"
           alt="Brasão"
-          width={106}
-          height={91}
+          width={80}
+          height={69}
           className="object-contain"
         />
 
-        <div className="text-center font-bold">
+        <div className="text-center font-bold text-sm">
           <p>ESTADO DE SANTA CATARINA</p>
           <p>SECRETARIA DE ESTADO DA EDUCAÇÃO</p>
           <p>
@@ -34,8 +34,8 @@ export default function Header({ fixed = false, className = '' }: HeaderProps) {
         <Image
           src="/images/cedup.png"
           alt="CEDUP"
-          width={91}
-          height={91}
+          width={69}
+          height={69}
           className="object-contain"
         />
       </div>
