@@ -99,6 +99,7 @@ export default function Carta() {
       </Head>
 
       <div className={`${showPrint ? 'hidden print:block' : 'block'}`}>
+        <Header />
         <div className="w-[650px] mx-auto p-5">
           <h1 className="text-2xl font-bold mb-4">Carta de Apresentação</h1>
           <form onSubmit={handleSubmit}>
@@ -180,6 +181,7 @@ export default function Carta() {
             </button>
           </form>
         </div>
+        <Footer />
       </div>
 
       <div
