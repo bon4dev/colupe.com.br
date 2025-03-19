@@ -23,6 +23,8 @@ export default function Estagio() {
               <li className="px-4 py-3 hover:bg-gray-50">
                 <Link
                   href="/cedup/estagio/carta"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-600 hover:text-blue-800"
                 >
                   1101 - Imprimir Carta de Apresentação de Estágio
@@ -41,6 +43,8 @@ export default function Estagio() {
               <li className="px-4 py-3 hover:bg-gray-50">
                 <Link
                   href="/cedup/estagio/ponto"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-600 hover:text-blue-800"
                 >
                   1109 - Imprimir Folha Ponto
