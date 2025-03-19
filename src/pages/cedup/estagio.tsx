@@ -21,14 +21,12 @@ export default function Estagio() {
           <div className="divide-y divide-gray-200">
             <ul>
               <li className="px-4 py-3 hover:bg-gray-50">
-                <a
-                  href={`${DOMAIN}/cedup/estagio/carta`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/cedup/estagio/carta"
                   className="text-blue-600 hover:text-blue-800"
                 >
                   1101 - Imprimir Carta de Apresentação de Estágio
-                </a>
+                </Link>
               </li>
               <li className="px-4 py-3 hover:bg-gray-50">
                 <a
