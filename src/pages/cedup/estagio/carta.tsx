@@ -12,7 +12,7 @@ export default function Carta() {
   const [cargaHoraria, setCargaHoraria] = useState('');
   const [curso, setCurso] = useState('');
   const [cursos, setCursos] = useState<{ value: string; text: string }[]>([]);
-  const [showPrint, setShowPrint] = useState(false);
+  // Removed unused state since print functionality is handled directly in handleSubmit
   const [professorData, setProfessorData] = useState({
     nome: '',
     matricula: '',
@@ -87,7 +87,7 @@ export default function Carta() {
     const dados = await buscarDados(curso);
     if (dados) {
       setProfessorData(dados);
-      setShowPrint(true);
+      // Remove setShowPrint since it's not defined and not needed
       setTimeout(() => window.print(), 100);
     }
   };
@@ -98,7 +98,7 @@ export default function Carta() {
         <title>Carta de Apresentação - CEDUP</title>
       </Head>
 
-      <div className={`${showPrint ? 'hidden print:block' : 'block'}`}>
+      <div className="print:hidden">
         <Header />
         <div className="w-[650px] mx-auto p-5">
           <h1 className="text-2xl font-bold mb-4">Carta de Apresentação</h1>
@@ -184,19 +184,15 @@ export default function Carta() {
         <Footer />
       </div>
 
-      <div
-        className={`${
-          showPrint ? 'block' : 'hidden'
-        } print:block w-[900px] mx-auto p-4`}
-      >
-        <Header fixed={true} />
+      <div className="hidden print:block w-[900px] mx-auto p-4">
+        <Header />
 
-        <main className="mt-32 mb-24 px-8 text-justify">
-          <p className="text-center font-bold text-lg mb-4">
+        <main className="mt-8 mb-12 px-8 text-justify">
+          <p className="text-center font-bold text-lg mb-3">
             CARTA DE APRESENTAÇÃO ESTÁGIO CURRICULAR OBRIGATÓRIO
           </p>
 
-          <p className="indent-8 text-lg leading-relaxed">
+          <p className="indent-8 text-lg leading-snug">
             A Coordenação de Estágio do CEDUP apresenta o(a) estudante,{' '}
             <span className="font-bold">{nomeAluno}</span>, matrícula nº{' '}
             <span className="font-bold">{matriculaAluno}</span>, matriculado(a)
@@ -218,14 +214,14 @@ export default function Carta() {
             </span>
           </p>
 
-          <p className="indent-8 text-lg leading-relaxed mt-4">
+          <p className="indent-8 text-lg leading-snug mt-2">
             A jornada do estudante/estagiário(a) será de no máximo 6 (seis)
             horas diárias até o limite de 30 (trinta) horas semanais. Os alunos
             que já concluíram o 3º módulo poderão fazer 8 (oito) horas diárias,
             até o limite de 40 horas semanais.
           </p>
 
-          <p className="indent-8 text-lg leading-relaxed mt-4">
+          <p className="indent-8 text-lg leading-snug mt-2">
             O estágio passa a ter validade somente após a aprovação do{' '}
             <span className="font-bold">
               Termo de Compromisso e Plano de Estágio
@@ -239,13 +235,13 @@ export default function Carta() {
             </span>
           </p>
 
-          <p className="indent-8 text-lg leading-relaxed mt-4">
+          <p className="indent-8 text-lg leading-snug mt-2">
             No Plano de Estágio deverá conter as atividades que serão
             desenvolvidas, o horário, a quantidade de horas diárias e total do
             aluno.
           </p>
 
-          <p className="indent-8 text-lg leading-relaxed mt-4">
+          <p className="indent-8 text-lg leading-snug mt-2">
             <span className="text-xl font-bold">
               É obrigatório Seguro de Acidente Pessoais
             </span>
@@ -263,12 +259,12 @@ export default function Carta() {
             <span className="font-bold"> para maiores informações).</span>
           </p>
 
-          <p className="indent-8 text-lg leading-relaxed mt-4">
+          <p className="indent-8 text-lg leading-snug mt-2">
             Quaisquer alterações nas cláusulas do Termo de Compromisso devem ser
             imediatamente comunicadas através de um aditivo ao TCE.
           </p>
 
-          <p className="indent-8 text-lg leading-relaxed mt-4">
+          <p className="indent-8 text-lg leading-snug mt-2">
             De acordo com a lei do estágio, a concedente facilitará a supervisão{' '}
             <span className="italic">in loco</span> do estágio, realizada pelos
             representantes da unidade escolar, disponibilizando a documentação
@@ -276,7 +272,7 @@ export default function Carta() {
             no sigilo das informações obtidas inerentes à supervisão.
           </p>
 
-          <p className="indent-8 text-lg leading-relaxed mt-4">
+          <p className="indent-8 text-lg leading-snug mt-2">
             O{' '}
             <span className="font-bold">
               Termo de Compromisso e Plano de Estágio{' '}
@@ -291,24 +287,24 @@ export default function Carta() {
             .
           </p>
 
-          <p className="text-lg mt-4">
+          <p className="text-lg mt-2">
             <span className="font-bold">
               Dados do orientador de estágio: {professorData.nome}
             </span>
           </p>
 
-          <p className="text-lg">
+          <p className="text-lg mt-1">
             Matrícula: {professorData.matricula} – E-mail: {professorData.email}
           </p>
 
-          <p className="text-lg mt-4">Atenciosamente,</p>
+          <p className="text-lg mt-2">Atenciosamente,</p>
 
-          <p className="text-lg text-right mt-4">
+          <p className="text-lg text-right mt-2">
             Joinville, {getDataAtual()}.
           </p>
         </main>
 
-        <Footer fixed={true} />
+        <Footer />
       </div>
     </>
   );

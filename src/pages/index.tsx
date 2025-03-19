@@ -1,5 +1,6 @@
 import { Geist } from 'next/font/google';
 import Head from 'next/head';
+import Link from 'next/link';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -16,7 +17,15 @@ export default function Home() {
       <div
         className={`min-h-screen flex items-center justify-center ${geistSans.variable}`}
       >
-        <h1 className="text-4xl font-bold">LCO Systems</h1>
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">LCO Systems</h1>
+          <Link
+            href="/cedup/estagio"
+            className="text-blue-600 hover:text-blue-800 underline"
+          >
+            Acessar Sistema de Estágio
+          </Link>
+        </div>
       </div>
     </>
   );
